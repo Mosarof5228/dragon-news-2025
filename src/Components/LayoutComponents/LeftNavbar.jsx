@@ -13,9 +13,9 @@ const LeftNavbar = () => {
     return (
         <div>
             <h2 className='text-left font-bold mb-4 text-xl'>All Category: {categorys.length}</h2>
-               <div className='flex flex-col items-start gap-2 '>
+               <div className='flex flex-col items-start w-full *:w-full gap-2 '>
                 {
-                    categorys.map(singleCategory=><NavLink to={`/singleCategory/${singleCategory.category_id}`}  key={singleCategory.category_id} className='btn bg-gray-300 w-[150px]'>{singleCategory.category_name}</NavLink>)
+                    categorys.map(singleCategory=><NavLink to={`/singleCategory/${singleCategory.category_id}`}  key={singleCategory.category_id} className='btn bg-white  w-[150px]'>{singleCategory.category_name}</NavLink>)
                     
                 }
                 

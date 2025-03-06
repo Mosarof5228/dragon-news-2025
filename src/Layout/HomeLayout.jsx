@@ -5,6 +5,7 @@ import Navbar from '../Components/Navbar';
 import LeftNavbar from '../Components/LayoutComponents/LeftNavbar';
 import RightLogin from '../Components/LayoutComponents/RightLogin';
 import FindUs from '../Components/LayoutComponents/FindUs';
+import { Outlet } from 'react-router-dom';
 
 const HomeLayout = () => {
   
@@ -20,7 +21,7 @@ const HomeLayout = () => {
               <LeftNavbar></LeftNavbar>
             </aside>
             <section className='col-span-6'>
-                middle side
+               <Outlet></Outlet>
             </section>
             <aside className='col-span-3 space-y-8'>
                 <RightLogin></RightLogin>
