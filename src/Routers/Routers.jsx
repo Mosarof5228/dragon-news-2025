@@ -3,6 +3,7 @@ import {
     Navigate,
   } from "react-router-dom";
 import HomeLayout from "../Layout/HomeLayout";
+import MiddleSingleNews from "../Components/LayoutComponents/MiddleSingleNews";
 
   export const router = createBrowserRouter([
     {
@@ -15,7 +16,9 @@ import HomeLayout from "../Layout/HomeLayout";
         }
 ,        {
           path:'/singleCategory/:id',
-          element:<h2 className="text-red-500">This is single category</h2>
+          element:<MiddleSingleNews></MiddleSingleNews>,
+          loader:({params})=>fetch(`https://openapi.programming-hero.com/api/news/category/${params.id}`)
+          
         }
       ]
      
